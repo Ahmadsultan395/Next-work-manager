@@ -1,0 +1,10 @@
+{
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/api/current/route": "app/api/current/route.js",
+  "/api/users/[userId]/tasks/route": "app/api/users/[userId]/tasks/route.js",
+  "/auth/login/page": "app/auth/login/page.js",
+  "/profile/users/page": "app/profile/users/page.js",
+  "/page": "app/page.js",
+  "/addTask/page": "app/addTask/page.js",
+  "/showTask/page": "app/showTask/page.js"
+}

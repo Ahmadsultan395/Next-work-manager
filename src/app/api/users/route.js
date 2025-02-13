@@ -1,38 +1,43 @@
 const { NextResponse } = require("next/server")
 
 import { connectDb } from "@/app/helper/db"
+import { User } from "@/app/model/user";
+import bcrypt from 'bcryptjs';
 
-connectDb();
-export function GET(request) {
-  const user = [
-    {
-      id: 1,
-      name: 'John Doe',
-      age: 30,
-      email: 'johndoe@example.com'
-    },
-    {
-      id: 2,
-      name: 'Jane Smith',
-      age: 28,
-      email: 'janesmith@example.com'
-    },
-    {
-      id: 3,
-      name: 'Alice Johnson',
-      age: 35,
-      email: 'alicejohnson@example.com'
-    }
-  ]
+// connectDb();
 
-  return NextResponse.json(user)
+// Get all users from the database
+export async function GET(request) {
+  await connectDb();
+  const user = await User.find({}).select("-password");
+  return NextResponse.json(user);
 }
 
 
-export function POST(request) {}
-
-export function PUT(request) {}
-
-export function DELETE(request) {
-  return NextResponse.json({ status: true, message:'delete api' } , { status: 201 , statusText: 'delete ok'})
+// Create a new user in the database
+export async function POST  (request) {
+  await connectDb();
+  const {name, email, password, about, profileUrl} = await request.json();
+  const user = new User({name , email, password, about, profileUrl});
+  
+ try {
+// hash password
+user.password = bcrypt.hashSync(user.password , parseInt(process.env.BCRYPT_URL ));
+  const createdUser = await user.save();
+  return NextResponse.json({
+    message: "user created successfully",
+    user: createdUser,
+  }, {
+    status: 201,
+  });
+ } catch (error) {
+  console.log(error);
+  return NextResponse.json({
+    message: "user creation failed",
+    error: error.message,
+  }, {
+    status: 400,
+  });
+ }
 }
+
