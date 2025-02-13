@@ -1,14 +1,12 @@
-const { NextResponse } = require("next/server")
-
-import { connectDb } from "@/app/helper/db"
+import { NextResponse } from "next/server";
+import { connectDB } from "@/app/helper/db"
 import { User } from "@/app/model/user";
 import bcrypt from 'bcryptjs';
 
-// connectDb();
 
 // Get all users from the database
 export async function GET(request) {
-  await connectDb();
+  await connectDB();
   const user = await User.find({}).select("-password");
   return NextResponse.json(user);
 }
@@ -16,7 +14,7 @@ export async function GET(request) {
 
 // Create a new user in the database
 export async function POST  (request) {
-  await connectDb();
+  await connectDB();
   const {name, email, password, about, profileUrl} = await request.json();
   const user = new User({name , email, password, about, profileUrl});
   

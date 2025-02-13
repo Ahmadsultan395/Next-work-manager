@@ -1,4 +1,4 @@
-// File: F:\GitHub\net-work-manager\src\app\profile\users\page.jsx
+// File: F:\nextjs\net-work-manager\src\app\profile\users\page.jsx
 import * as entry from '../../../../../src/app/profile/users/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

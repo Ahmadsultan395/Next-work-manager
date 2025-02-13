@@ -1,4 +1,4 @@
-// File: F:\GitHub\net-work-manager\src\app\api\logout\route.js
+// File: F:\nextjs\net-work-manager\src\app\api\logout\route.js
 import * as entry from '../../../../../src/app/api/logout/route.js'
 import type { NextRequest } from 'next/server.js'
 

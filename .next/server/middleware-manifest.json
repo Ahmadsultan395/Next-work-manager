@@ -10,15 +10,42 @@
       "page": "/",
       "matchers": [
         {
-          "regexp": "^/.*$",
-          "originalSource": "/:path*"
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(\\/?index|\\/?index\\.json))?[\\/#\\?]?$",
+          "originalSource": "/"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/auth\\/login(\\.json)?[\\/#\\?]?$",
+          "originalSource": "/auth/login"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/auth\\/signUp(\\.json)?[\\/#\\?]?$",
+          "originalSource": "/auth/signUp"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/addTask(\\.json)?[\\/#\\?]?$",
+          "originalSource": "/addTask"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/showTask(\\.json)?[\\/#\\?]?$",
+          "originalSource": "/showTask"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/profile(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\.json)?[\\/#\\?]?$",
+          "originalSource": "/profile/:path*"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/api(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\.json)?[\\/#\\?]?$",
+          "originalSource": "/api/:path*"
         }
       ],
       "wasm": [],
       "assets": [],
       "env": {
-        "__NEXT_BUILD_ID": "development",
-        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "cnaxWgBmGBKFCpQrQD1liJ3jtnbiIkiSiG3RdXqNkrY="
+        "__NEXT_BUILD_ID": "m3AQ_MT7XD6hI91m0uwQf",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "cnaxWgBmGBKFCpQrQD1liJ3jtnbiIkiSiG3RdXqNkrY=",
+        "__NEXT_PREVIEW_MODE_ID": "864581049d744de9440df8534e02d135",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "d0f3a84b58d09cb9165cc82b983745f5ef1f23eed999e3887fb65e8e6ded8064",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "002e73e06fc16e43318926d641d2433525190cdc11ddba9bcf62271dc9d11a2c"
       }
     }
   },
