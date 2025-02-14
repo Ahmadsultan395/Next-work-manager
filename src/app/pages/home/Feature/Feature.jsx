@@ -31,7 +31,7 @@ const featurelist = [
 const Feature = () => {
   return (
     <div className='p-10 flex justify-center w-screen'>
-        <div  className='grid grid-cols-4 gap-5 p-10'>
+        <div  className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-10'>
       {featurelist.map((items, index)=>(
           <div key={index} className='bg-cyan-500 rounded-lg p-5 place-items-center'>
             <span className='text-3xl'>{items.icon}</span>

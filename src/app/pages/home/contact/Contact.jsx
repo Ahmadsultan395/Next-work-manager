@@ -35,9 +35,9 @@ const Contact = () => {
     }
   
   return (
-    <div className='bg-gray-100'>
+    <div className='bg-gray-100 px-10'>
       <form action=""  onSubmit={handleSubmit(onSubmit)}
-      className='gid-col-span-6 col-start-4 rounded-lg p-5 place-items-center border-2 border-gray-200 shadow-lg shadow-gray-300'>
+      className='gid-col-span-6 col-start-4 rounded-lg p-5 place-items-center'>
         <h1 className='text-3xl font-semibold text-gray-800 my-5'>Contact Us</h1>
 
         {/* name */}

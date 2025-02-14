@@ -39,9 +39,9 @@ const AddTask = () => {
   }
 
   return (
-    <div className='my-5 grid grid-cols-12'>
+    <div className='my-5 grid grid-cols-12 px-10'>
 
-      <div className='bg-[url("/login/formBg2.jpg")] col-span-6 col-start-4 rounded-lg p-5 place-items-center border-2 border-gray-200 shadow-lg shadow-gray-300'> 
+      <div className='bg-[url("/login/formBg2.jpg")] col-span-12  col-start-1 md:col-span-6 md:col-start-4 rounded-lg p-5 place-items-center border-2 border-gray-200 shadow-lg shadow-gray-300'> 
         <Image src={'/login/login.svg'} alt='add task' width={300} height={300}/>
         <h1 className='text-3xl font-semibold text-violet-800 my-5'>Lets Start Add Task</h1>
 

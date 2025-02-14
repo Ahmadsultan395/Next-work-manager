@@ -5,8 +5,8 @@ const CardControl = () => {
   return (
     <div className='flex justify-center w-screen '>
       <div className='flex flex-col items-center justify-center w-full p-10  rounded-lg'>
-      <h1 className='text-white text-2xl font-bold mb-2'>Take Control of Your Tasks</h1>
-      <p className='text-white text-lg mb-5'>
+      <h1 className='text-white text-center text-2xl font-bold mb-2'>Take Control of Your Tasks</h1>
+      <p className='text-white text-lg mb-5 text-center'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quia!
       </p>
       <Link href='/addTask'>

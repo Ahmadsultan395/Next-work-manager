@@ -54,9 +54,9 @@ const SignUp = () => {
   
 
   return (
-    <div className='my-5 grid grid-cols-12'>
+    <div className='my-5 flex justify-center items-center w-full px-10'>
 
-      <div className='bg-[url("/login/formBg2.jpg")] col-span-6 col-start-4 rounded-lg p-5 place-items-center border-2 border-gray-200 shadow-lg shadow-gray-300'> 
+      <div className='bg-[url("/login/formBg2.jpg")] w-auto sm:w-auto md:w-[700px] rounded-lg p-5 place-items-center border-2 border-gray-200 shadow-lg shadow-gray-300'> 
         <Image src={'/login/signUp.svg'} alt='add task' width={300} height={100} />
         <h1 className='text-3xl font-semibold text-violet-800 my-5'>Lets Here Sign Up</h1>
 
